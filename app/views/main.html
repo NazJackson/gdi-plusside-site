@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <video-bg video-id="'At3maLeRYJM'">
+    <swiper class="swiper">
+      <slides>
+        <slide ng-repeat="entry in vm.entries">
+          <div class="card">
+            <h1>"{{entry.appreciation}}"</h1>
+            <h5>{{entry.city}}, {{entry.state}}</h5>
+          </div>
+        </slide>
+      </slides>
+      <prev></prev>
+      <next></next>
+    </swiper>
+  </video-bg>
+</div>
+
+<div class="jumbotron" id="footer">
+  <form class="form-inline">
+    <div class="row">
+      <h3>I'm from:</h3>
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="city" ng-model="vm.city">
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="state" ng-model="vm.state">
+    </div>
+    <div class="row">
+      <h3>The <span style="color:white;font-family:'Chewy'">plus side</span> of my day was:</h3>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="appreciation" ng-model="vm.appreciation">
+    <button class="button" type="submit" ng-click="vm.postEntry()">Submit</button>
+      
+    </div>
+  </form>
+
+
+</div>
